@@ -3,7 +3,10 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <p>This is my React Weather App</p>
+      <div className="container">
+        <p>This is my React Weather App</p>
+        <button className="btn btn-success">Click</button>
+      </div>
     </div>
   );
 }
