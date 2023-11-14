@@ -7,13 +7,17 @@
 }
 
 .Search input {
-  padding: 10px;
+  padding: 15px 20px;
   border: none;
   background: rgb(250, 221, 221);
-  border-radius: 10px;
+  border-radius: 6px;
   width: 270px;
+  font-size: 16px;
+  line-height:20px;
 }
 
 .Search btn {
-  padding: 8px 5px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 13px 5px;
 }
