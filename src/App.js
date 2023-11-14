@@ -1,11 +1,11 @@
 import "./App.css";
+import Search from "./Search";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <p>This is my React Weather App</p>
-        <button className="btn btn-success">Click</button>
+        <Search />
       </div>
     </div>
   );

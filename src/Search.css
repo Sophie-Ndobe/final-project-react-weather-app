@@ -1,0 +1,19 @@
+.Search {
+  max-width: 850px;
+  border-radius: 16px;
+  margin: 40px auto;
+  padding: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.Search input {
+  padding: 10px;
+  border: none;
+  background: rgb(250, 221, 221);
+  border-radius: 10px;
+  width: 270px;
+}
+
+.Search btn {
+  padding: 8px 5px;
+}
