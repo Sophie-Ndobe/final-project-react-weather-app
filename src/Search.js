@@ -1,43 +1,68 @@
 import React, { useState } from "react";
 import "./Search.css";
+import axios from "axios";
 import Weather from "./Weather";
 
-export default function Search() {
-  const [city, setCity] = useState(" ");
+export default function Search({ defaultCity }) {
+  const [city, setCity] = useState(defaultCity);
+  const [weather, setWeather] = useState({ ready: false });
+
+  function fetchWeatherData(response) {
+    setWeather({
+      ready: true,
+      city: response.data.city,
+      temperature: Math.round(response.data.temperature.current),
+      humidity: response.data.temperature.humidity,
+      wind: response.data.wind.speed,
+      description: response.data.condition.description,
+    });
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(city);
+    apiCall();
   }
 
   function updateCity(event) {
     setCity(event.target.value);
   }
 
-  return (
-    <div className="Search">
-      <div className="row">
-        <div className="col-6">
-          <h1>Pretoria</h1>
-        </div>
-        <div className="col-6">
-          <form onSubmit={handleSubmit}>
-            <div className="row">
-              <div className="col-8">
-                <input
-                  type="search"
-                  placeholder="Enter a city..."
-                  onChange={updateCity}
-                />
+  function apiCall() {
+    let apiKey = "2c13e0a2b6fe347b0421bb02eef2o43t";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+
+    axios.get(apiUrl).then(fetchWeatherData);
+  }
+
+  if (weather.ready) {
+    return (
+      <div className="Search">
+        <div className="row">
+          <div className="col-6">
+            <h1>{weather.city}</h1>
+          </div>
+          <div className="col-6">
+            <form onSubmit={handleSubmit}>
+              <div className="row">
+                <div className="col-8">
+                  <input
+                    type="search"
+                    placeholder="Enter a city..."
+                    onChange={updateCity}
+                  />
+                </div>
+                <div className="col-4">
+                  <button className="btn btn-primary w-100">Search</button>
+                </div>
               </div>
-              <div className="col-4">
-                <btn className="btn btn-primary w-100">Search</btn>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
+        <Weather data={weather} />
       </div>
-      <Weather />
-    </div>
-  );
+    );
+  } else {
+    apiCall();
+    return <p>Loading....</p>;
+  }
 }

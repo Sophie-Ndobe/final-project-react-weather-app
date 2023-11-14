@@ -1,7 +1,8 @@
 import React from "react";
 import "./Weather.css";
+import MainDate from "./MainDate";
 
-export default function Weather() {
+export default function Weather(props) {
   return (
     <div className="Weather">
       <div className="row">
@@ -12,15 +13,16 @@ export default function Weather() {
               alt="icon"
               width="100"
             />
-            <h2>19</h2>
+            <h2>{props.data.temperature}</h2>
             <span className="unit">°C</span>
           </div>
         </div>
         <div className="col-6">
           <ul>
-            <li>Saturday 17:44, overcast clouds</li>
+            <li className="d-flex justify-content-center"><MainDate />, {props.data.description}</li>
             <li>
-              Humidity: <strong>70%</strong>, Wind: <strong>3.6km/h</strong>
+              Humidity: <strong>{props.data.humidity}%</strong>, Wind:{" "}
+              <strong>{props.data.wind}km/h</strong>
             </li>
           </ul>
         </div>
