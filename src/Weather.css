@@ -1,0 +1,26 @@
+.Weather {
+  margin-top: 20px;
+}
+.Weather h2 {
+  font-size: 80px;
+  font-weight: 600;
+  margin-left: 20px;
+  color: #272142;
+}
+
+.Weather ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  color: #272142;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.Weather .unit {
+  font-size: 25px;
+  font-weight: 600;
+  position: relative;
+  top: 14px;
+  margin-left: 5px;
+}

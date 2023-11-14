@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Search.css";
+import Weather from "./Weather";
 
 export default function Search() {
   const [city, setCity] = useState(" ");
@@ -36,6 +37,7 @@ export default function Search() {
           </form>
         </div>
       </div>
+      <Weather />
     </div>
   );
 }
