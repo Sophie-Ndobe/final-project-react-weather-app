@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Search.css";
 import axios from "axios";
 import Weather from "./Weather";
-import Forecast from "./Forecast";
+import Forecast from "./Forecast"
 
 export default function Search({ defaultCity }) {
   const [city, setCity] = useState(defaultCity);
@@ -16,6 +16,7 @@ export default function Search({ defaultCity }) {
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
       description: response.data.condition.description,
+      icon: response.data.condition.icon,
     });
   }
 

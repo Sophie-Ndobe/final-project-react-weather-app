@@ -17,6 +17,11 @@
   line-height: 28px;
 }
 
+.Weather .icon {
+  width: 80px;
+  margin-top: 30px;
+}
+
 .Weather .unit {
   font-size: 25px;
   font-weight: 600;

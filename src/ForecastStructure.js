@@ -1,5 +1,6 @@
 import React from "react";
 import "./ForecastStructure.css";
+import Icon from "./Icon";
 
 export default function ForecastStructure(props) {
   function formatDay() {
@@ -24,12 +25,11 @@ export default function ForecastStructure(props) {
 
   return (
     <div className="ForecastStructure">
-      <div>{formatDay()}</div>
-      <img
-        src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-        alt="weather-icon"
-      />
-      <div>
+      <div className="mb-3
+      ">{formatDay()}</div>
+      
+      <Icon iconName={props.data[0].condition.icon}  size={40}/>
+      <div className="mt-2">
         <span className="me-1">{maxTemperature()}°</span>
         <span className="ms-1">{minTemperature()}°</span>
       </div>
