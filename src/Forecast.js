@@ -1,17 +1,30 @@
-import React from "react";
-import "./Forecast.css";
+import React, { useState } from "react";
+import ForecastStructure from "./ForecastStructure";
+import axios from "axios";
 
-export default function Forecast() {
-  return (
-    <div className="Forecast mt-5">
-      <div className="day">Tue</div>
-      <img
-        src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-        alt="weather-icon"
-      />
-      <div className="mt-2 temperature">
-        <span>23°</span> <span className="ms-2">16°</span>
+export default function Forecast(props) {
+  const [forecast, setForecast] = useState("");
+  const [loaded, setLoaded] = useState(false);
+
+  function fetchForecastData(response) {
+    setLoaded(true);
+    setForecast(response.data.daily);
+  }
+  function forecastApiCall() {
+    let apiKey = "2c13e0a2b6fe347b0421bb02eef2o43t";
+    let forecastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.city}&key=${apiKey}&units=metric`;
+
+    axios.get(forecastApiUrl).then(fetchForecastData);
+  }
+
+  if (loaded) {
+    return (
+      <div>
+        <ForecastStructure data={forecast} />
       </div>
-    </div>
-  );
+    );
+  } else {
+    forecastApiCall();
+    return null;
+  }
 }

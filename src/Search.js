@@ -60,7 +60,7 @@ export default function Search({ defaultCity }) {
           </div>
         </div>
         <Weather data={weather} />
-				<Forecast />
+        <Forecast city={city}/>
       </div>
     );
   } else {
