@@ -1,5 +1,5 @@
 .Search {
-  max-width: 850px;
+  max-width: 800px;
   border-radius: 16px;
   margin: 40px auto;
   padding: 25px;
@@ -13,11 +13,11 @@
 }
 
 .Search input {
-  padding: 15px 20px;
+  padding: 12px 20px;
   border: none;
-  background: rgb(250, 221, 221);
+  background: #ffffcc;
   border-radius: 6px;
-  width: 270px;
+  width: 340px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -25,5 +25,7 @@
 .Search button {
   font-size: 16px;
   line-height: 20px;
-  padding: 13px 5px;
+  padding: 12px 5px;
+  background: #daa520;
+  border: #daa520;
 }

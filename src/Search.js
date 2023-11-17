@@ -40,10 +40,10 @@ export default function Search({ defaultCity }) {
     return (
       <div className="Search">
         <div className="row">
-          <div className="col-6">
+          <div className="col-4">
             <h1>{weather.city}</h1>
           </div>
-          <div className="col-6">
+          <div className="col-8">
             <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-8">
