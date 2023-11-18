@@ -1,15 +1,18 @@
 .Search {
-  max-width: 800px;
+  max-width: 750px;
   border-radius: 16px;
   margin: 40px auto;
   padding: 25px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-image: url("../public/flowers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .Search h1 {
   color: #272142;
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .Search input {
@@ -17,9 +20,11 @@
   border: none;
   background: #ffffcc;
   border-radius: 6px;
-  width: 340px;
+  width: 320px;
   font-size: 16px;
   line-height: 20px;
+  color: 
+  rgb(235, 234, 234);
 }
 
 .Search button {
@@ -28,4 +33,8 @@
   padding: 12px 5px;
   background: #daa520;
   border: #daa520;
+}
+
+.Search .padding {
+  padding-top: 11px;
 }

@@ -43,7 +43,7 @@ export default function Search({ defaultCity }) {
           <div className="col-4">
             <h1>{weather.city}</h1>
           </div>
-          <div className="col-8">
+          <div className="col-8 padding">
             <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-8">

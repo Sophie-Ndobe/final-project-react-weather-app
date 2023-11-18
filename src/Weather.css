@@ -1,9 +1,9 @@
 .Weather {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .Weather h2 {
   font-size: 80px;
-  font-weight: 600;
+  font-weight: 700;
   margin-left: 20px;
   color: #272142;
 }
@@ -17,10 +17,6 @@
   line-height: 28px;
 }
 
-.Weather strong {
-  color: #daa520;
-}
-
 .Weather .icon {
   width: 80px;
   margin-top: 30px;
@@ -28,7 +24,7 @@
 
 .Weather .unit {
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 700;
   position: relative;
   top: 14px;
   margin-left: 5px;
