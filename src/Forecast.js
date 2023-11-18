@@ -5,7 +5,7 @@ import axios from "axios";
 
 export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
-  const [forecast, setForecast] = useState(null);
+  const [forecast, setForecast] = useState([]);
 
   useEffect(() => {
     setLoaded(false);
