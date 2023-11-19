@@ -40,10 +40,10 @@ export default function Search({ defaultCity }) {
     return (
       <div className="Search">
         <div className="row">
-          <div className="col-4">
+          <div className="col-5">
             <h1>{weather.city}</h1>
           </div>
-          <div className="col-8 padding">
+          <div className="col-7 padding">
             <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-8">
@@ -61,7 +61,7 @@ export default function Search({ defaultCity }) {
           </div>
         </div>
         <Weather data={weather} />
-        <Forecast city={city} />
+        <Forecast city={weather.city} />
       </div>
     );
   } else {

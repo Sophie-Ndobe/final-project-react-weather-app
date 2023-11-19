@@ -12,8 +12,8 @@ export default function Forecast(props) {
   }, [props.city]);
 
   function fetchForecastData(response) {
-    setLoaded(true);
     setForecast(response.data.daily);
+    setLoaded(true);
   }
 
   function forecastApiCall() {

@@ -11,8 +11,9 @@
 
 .Search h1 {
   color: #272142;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
+  padding-top: 10px;
 }
 
 .Search input {
@@ -20,7 +21,7 @@
   border: none;
   background: #ffffcc;
   border-radius: 6px;
-  width: 320px;
+  width: 280px;
   font-size: 16px;
   line-height: 20px;
   color: grey;
