@@ -3,6 +3,7 @@ import "./Search.css";
 import axios from "axios";
 import Weather from "./Weather";
 import Forecast from "./Forecast"
+import Footer from "./Footer";
 
 export default function Search({ defaultCity }) {
   const [city, setCity] = useState(defaultCity);
@@ -62,6 +63,7 @@ export default function Search({ defaultCity }) {
         </div>
         <Weather data={weather} />
         <Forecast city={weather.city} />
+        <Footer />
       </div>
     );
   } else {
