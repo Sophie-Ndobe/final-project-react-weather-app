@@ -7,3 +7,8 @@
     background: #ffffcc;
 }
 
+@media (max-width: 650px) {
+  .ForecastStructure {
+    font-size: 14px;
+  }
+}

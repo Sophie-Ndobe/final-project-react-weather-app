@@ -29,3 +29,22 @@
   top: 14px;
   margin-left: 5px;
 }
+
+@media (max-width: 650px) {
+  .Weather h2{
+    font-size: 60px;
+    padding-left: 20px;
+
+  }
+
+  .Weather ul {
+    font-size: 14px;
+    line-height: 20px;
+  }
+   
+  .Weather .icon {
+    width:50px;
+    margin-top:10px;
+    padding-left: 10px;
+  }
+}

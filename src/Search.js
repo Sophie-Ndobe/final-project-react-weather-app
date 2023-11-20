@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Search.css";
 import axios from "axios";
 import Weather from "./Weather";
-import Forecast from "./Forecast"
+import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 export default function Search({ defaultCity }) {

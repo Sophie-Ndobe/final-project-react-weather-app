@@ -38,3 +38,18 @@
 .Search .padding {
   padding-top: 11px;
 }
+
+@media (max-width: 675px) {
+  .Search h1 {
+    font-size: 30px;
+  }
+
+  .Search input {
+    width: 185px;
+    font-size: 14px;
+  }
+
+  .Search button {
+    font-size: 14px;
+  }
+}

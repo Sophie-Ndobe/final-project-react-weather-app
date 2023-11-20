@@ -1,9 +1,20 @@
 .Footer {
-    color: white;
-    padding-top: 30px;
-    font-size: 10px;
+  color: white;
+  padding-top: 30px;
+  font-size: 14px;
 }
 
 .Footer a {
-    color: #daa520;
+  color: #daa520;
+  text-decoration: none;
+}
+
+.Footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+  .Footer {
+    font-size: 12px;
+  }
 }

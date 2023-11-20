@@ -35,7 +35,7 @@ export default function ForecastStructure(props) {
 
         <Icon iconName={props.data.condition.icon} size={40} />
         <div className="mt-2">
-          <span className="me-1">{maxTemperature()}°</span>
+          <span className="me-1"><strong>{maxTemperature()}°</strong></span>
           <span className="ms-1">{minTemperature()}°</span>
         </div>
       
